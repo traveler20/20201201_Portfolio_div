@@ -103,7 +103,8 @@ li {
 }
 
 .logo-name {
-  font-family: "Amatic SC", cursive;
+  font-family: "Noto sans", cursive;
+  /*Josefin Sans Amatic SC, */
   font-size: 32px;
   line-height: 1;
   display: block;
@@ -117,7 +118,8 @@ li {
 }
 
 .logo-title {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Lora", serif;
+   /* CormorantGaramond, */
   font-size: 88px;
   font-weight: normal;
   line-height: 1;
@@ -200,6 +202,19 @@ li {
 
 .feature-body p:not(:last-child) {
   margin-bottom: 20px;
+}
+
+/*featureを2つ以上用意するver*/
+.reverse-feature{
+  /*content-innnerクラスとの間を50px空ける*/
+  margin-top: 60px;
+  /*フレックスコンテナの主軸方向が row の逆に設定*/
+  flex-direction: row-reverse;
+}
+/*交互になる分、画像の余白設定も入れ替わる（sp版も調整必要）*/
+.reverse-feature div img{
+  margin-right: 0;
+  margin-left: 40px;
 }
 
 /*--------------------------------
@@ -322,6 +337,16 @@ li {
   display: inline-block;
   height: 20px;
   content: "★★★★★";
+}
+.l-rate:before,
+.l-rate:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 20px;
+  display: inline-block;
+  height: 20px;
+  content: "★★★★★★★★★★";
 }
 
 .rate:before {
@@ -489,6 +514,10 @@ li {
     max-width: 100%;
     margin-right: 0;
     margin-bottom: 20px;
+  }
+  .reverse-feature div img{
+    margin-right: 0;
+    margin-left: 0;
   }
 
   /* Works */
